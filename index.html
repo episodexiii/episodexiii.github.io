@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>周末约会计划</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        h1 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            color: #20c997;
+            margin: 25px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f1f1f1;
+        }
+        
+        h3 {
+            color: #339af0;
+            margin: 15px 0 10px;
+        }
+        
+        .plan-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .plan-card {
+            flex: 1;
+            min-width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 500px;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .location {
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .location h4 {
+            color: #495057;
+            margin-bottom: 5px;
+        }
+        
+        .location p {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4dabf7;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #339af0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            color: #868e96;
+            font-size: 14px;
+        }
+        
+        .transportation {
+            margin-top: 10px;
+            color: #6c757d;
+        }
+        
+        .highlight {
+            color: #fd7e14;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>北邮海淀&沙河校区 · 周末约会计划</h1>
+            <p>为您精心规划的周末约会路线，地点在两校区之间，距离适中</p>
+        </header>
+        
+        <section>
+            <h2>约会方案一：清河万象汇休闲日</h2>
+            
+            <div class="plan-container">
+                <div class="plan-card">
+                    <h3>午餐 · 美食推荐</h3>
+                    <div class="location">
+                        <h4>九本居酒屋(清河和盈中心店)</h4>
+                        <p>地址：小营西路10号院和盈中心一层</p>
+                        <p>特色：日式料理，环境优雅，适合约会</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>香丰渔港蒸汽海鲜(清河店)</h4>
+                        <p>地址：小营西路10号院和盈中心二层</p>
+                        <p>特色：新鲜海鲜，粤式口味，环境舒适</p>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <h3>下午 · 休闲娱乐</h3>
+                    <div class="location">
+                        <h4>北京清河万象汇</h4>
+                        <p>地址：清河中街68号</p>
+                        <p>特色：大型购物中心，有各种时尚品牌、餐饮</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>CGV影城(北京清河万象汇店)</h4>
+                        <p>地址：清河中街68号北京清河万象汇东区7-8层</p>
+                        <p>特色：舒适的观影环境，可以看最新电影</p>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <h3>晚餐 · 美食推荐</h3>
+                    <div class="location">
+                        <h4>云海肴云南菜</h4>
+                        <p>地址：前屯路文龙家园四里4号楼4F</p>
+                        <p>特色：云南特色菜，口味独特，环境优雅</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>沸腾·渝樂江湖</h4>
+                        <p>地址：小营西路10号院1号楼裙楼二层</p>
+                        <p>特色：重庆火锅，麻辣鲜香，氛围热闹</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transportation">
+                <p><span class="highlight">交通提示：</span>从海淀校区可乘坐地铁13号线至清河站，转乘公交至清河万象汇；从沙河校区可乘坐公交至清河万象汇。两校区到此地距离适中。</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://uri.amap.com/marker?markers=116.334435,40.030181,北京清河万象汇|116.365794,39.964872,北京邮电大学海淀校区|116.289887,40.157615,北京邮电大学沙河校区&src=mypage&coordinate=gaode&callnative=0" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </section>
+        
+        <section>
+            <h2>约会方案二：公园野餐+电影之旅</h2>
+            
+            <div class="plan-container">
+                <div class="plan-card">
+                    <h3>上午 · 户外野餐</h3>
+                    <div class="location">
+                        <h4>清河燕清体育文化公园</h4>
+                        <p>地址：清河毛纺路26号</p>
+                        <p>特色：环境优美，空气清新，适合野餐和散步</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>清河翠谷</h4>
+                        <p>地址：G6辅路与小营东路交叉口南200米</p>
+                        <p>特色：绿化好，环境安静，适合放松休闲</p>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <h3>午餐 · 美食推荐</h3>
+                    <div class="location">
+                        <h4>大话小腰(清河小营店)</h4>
+                        <p>地址：清河小营村桥东100米路北</p>
+                        <p>特色：特色小吃，口味独特，排队热门</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>汕头八合里海记牛肉店</h4>
+                        <p>地址：北京城区G6国道辅路</p>
+                        <p>特色：潮汕牛肉，新鲜美味，值得品尝</p>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <h3>下午/晚上 · 电影之旅</h3>
+                    <div class="location">
+                        <h4>东融国际影城(西小口店)</h4>
+                        <p>地址：文龙家园四里悦茂购物中心4层</p>
+                        <p>特色：环境舒适，设备先进，观影体验好</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>悦茂购物中心</h4>
+                        <p>地址：营福路与前屯路交叉口东100米</p>
+                        <p>特色：购物中心，有各种餐饮和娱乐选择</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transportation">
+                <p><span class="highlight">交通提示：</span>两校区都可以乘坐公交至清河地区，公园附近有多条公交线路可达。</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://uri.amap.com/marker?markers=116.365794,39.964872,北京邮电大学海淀校区|116.289887,40.157615,北京邮电大学沙河校区|116.338662,40.025461,清河燕清体育文化公园&src=mypage&coordinate=gaode&callnative=0" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </section>
+        
+        <section>
+            <h2>约会方案三：悦茂购物中心美食之旅</h2>
+            
+            <div class="plan-container">
+                <div class="plan-card">
+                    <h3>午餐 · 美食推荐</h3>
+                    <div class="location">
+                        <h4>海底捞火锅(悦茂购物中心店)</h4>
+                        <p>地址：文龙家园四里4号楼悦茂购物中心</p>
+                        <p>特色：服务周到，火锅美味，约会氛围好</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>阿含泰(清河店)</h4>
+                        <p>地址：文龙家园三里九号楼一层底商</p>
+                        <p>特色：泰国菜，口味正宗，环境优雅</p>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <h3>下午 · 休闲购物</h3>
+                    <div class="location">
+                        <h4>悦茂购物中心</h4>
+                        <p>地址：营福路与前屯路交叉口东100米</p>
+                        <p>特色：购物中心，有各种时尚品牌和休闲娱乐</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>小营公园</h4>
+                        <p>地址：前屯路与营福路交叉口西南120米</p>
+                        <p>特色：小巧精致，适合散步休闲</p>
+                    </div>
+                </div>
+                
+                <div class="plan-card">
+                    <h3>晚上 · 电影放松</h3>
+                    <div class="location">
+                        <h4>东融国际影城(西小口店)</h4>
+                        <p>地址：文龙家园四里悦茂购物中心4层</p>
+                        <p>特色：环境舒适，设备先进，观影体验好</p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>晚餐 · 云海肴云南菜</h4>
+                        <p>地址：前屯路文龙家园四里4号楼4F</p>
+                        <p>特色：云南特色菜，口味独特，环境优雅</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="transportation">
+                <p><span class="highlight">交通提示：</span>从两校区均有公交直达，地理位置适中，交通便利。</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://uri.amap.com/marker?markers=116.365794,39.964872,北京邮电大学海淀校区|116.289887,40.157615,北京邮电大学沙河校区|116.328824,40.038561,悦茂购物中心&src=mypage&coordinate=gaode&callnative=0" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </section>
+        
+        <section>
+            <h2>地图导航</h2>
+            <p>点击下方按钮，使用高德地图查看具体路线规划：</p>
+            
+            <div style="margin-top: 20px;">
+                <a href="https://uri.amap.com/navigation?from=116.365794,39.964872,北京邮电大学海淀校区&to=116.334435,40.030181,北京清河万象汇&callnative=0" class="btn" target="_blank">从海淀校区到清河万象汇</a>
+                
+                <a href="https://uri.amap.com/navigation?from=116.289887,40.157615,北京邮电大学沙河校区&to=116.334435,40.030181,北京清河万象汇&callnative=0" class="btn" target="_blank">从沙河校区到清河万象汇</a>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <a href="https://uri.amap.com/navigation?from=116.365794,39.964872,北京邮电大学海淀校区&to=116.328824,40.038561,悦茂购物中心&callnative=0" class="btn" target="_blank">从海淀校区到悦茂购物中心</a>
+                
+                <a href="https://uri.amap.com/navigation?from=116.289887,40.157615,北京邮电大学沙河校区&to=116.328824,40.038561,悦茂购物中心&callnative=0" class="btn" target="_blank">从沙河校区到悦茂购物中心</a>
+            </div>
+        </section>
+        
+        <section>
+            <h2>约会路线地图</h2>
+            <div class="map-container">
+                <iframe src="https://uri.amap.com/plan?origin=116.365794,39.964872&destination=116.289887,40.157615&waypoints=116.334435,40.030181&type=car&src=mypage&callnative=0" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+        </section>
+        
+        <footer>
+            <p>祝您约会愉快！周末时光美好！</p>
+        </footer>
+    </div>
+    
+    <script>
+        // 在页面加载时自动滚动到顶部
+        window.onload = function() {
+            window.scrollTo(0, 0);
+        };
+    </script>
+</body>
+</html>
